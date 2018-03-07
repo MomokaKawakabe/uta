@@ -11,8 +11,7 @@
       <button @click="article.add(article2)">add</button>
 
 
-
-      <button @click="$router.push('/index2')">go</button>
+      <button @click="$router.push('/')">return</button>
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
@@ -44,6 +43,7 @@ export default {
     callback(null , { article2: article2 });
   },
   data () {
+    console.log("******data************")
     return {
       article: new Article()
     }
