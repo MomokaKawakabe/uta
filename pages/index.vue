@@ -3,12 +3,12 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        uta {{article2.no}}
+        uta {{article.no}}
       </h1>
       <h1 class="title">
-        uta {{article.getNo(article2)}}
+        uta {{article.getNo()}}
       </h1>
-      <button @click="article.add(article2)">add</button>
+      <button @click="article.add()">add</button>
 
 
 
@@ -41,19 +41,23 @@ export default {
   },
   asyncData ({ params , store }, callback) {
     let article2 = new Article();
-    callback(null , { article2: article2 });
+    article2.no = "999"
+    setTimeout(callback(null , { article2: article2 }) , 500);
   },
   data () {
     return {
       article: new Article()
     }
   },
+  created(){
+    this.article.render(this.article2);
+    console.log(this.article);
+    console.log(this.article.getNo);
+  },
   beforeMount() {
 
   },
   mounted(){
-    console.log(this.article);
-    console.log(this.article2);
   }
 }
 </script>
