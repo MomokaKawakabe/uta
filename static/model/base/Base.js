@@ -1,28 +1,30 @@
 
-export default function Base() {
+export default class Base {
 
-  this.errorMessage = null;
-	this.loading = false;
-  this.fail = false;
-}
+  constructor(args) {
+    this.errorMessage = null;
+  }
 
-Base.prototype.render = function (obj) {
-  if (obj) {
-    Object.assign(this, obj);
+  render(obj) {
+    // console.log($.extend)
+    if (obj) {
+      Object.assign(this, obj);
+    }
+  }
+
+
+  renderEntity(field, Clazz) {
+    let obj = this[field];
+    if (!obj) {
+      if (Clazz) {
+        let EntityClazz = this.constructor;
+        obj = (new EntityClazz())[field]
+      } else {
+        return
+      }
+    }
+
   }
 }
 
-Base.prototype.renderList = function (field, Clazz) {
-	let beans = this[field];
-	if (!beans || !Clazz) {
-		return;
-	}
-	this[field] = [];
-	for (let i = 0; i < beans.length; i++) {
-		let bean = beans[i];
-		let clazz = new Clazz();
-		clazz.render(bean);
-		this[field].push(clazz);
-	}
-}
 

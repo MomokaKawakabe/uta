@@ -1,28 +1,22 @@
 import BaseEntity from "./base/BaseEntity";
-import Base from "./base/Base";
+import User from "./User";
 
-export default function Article() {
-  this.no = 1;
-  this.subtitle = null;
-  this.hit = null;
-  this.lastEditTime = new Date();
-  this.tags = [];
-  this.poster = null;
-  this.content = null;
-}
+export default class Article extends BaseEntity {
 
-Article.prototype.TAG = "SGASGAS";
-Article.prototype.add = function () {
-  this.no ++;
-}
+  constructor(args) {
+    super(args);
+    this.hit = 0;
+    this.title = "文章1";
+    this.creator = new User();
+  }
 
-Article.prototype.getNo = function () {
-  return this.no;
-}
+  praise() {
+    this.hit ++;
+  }
+
+  render(obj) {
+    super.render(obj);
 
 
-Article.prototype.render = function (obj) {
-  if (obj) {
-    Object.assign(this, obj);
   }
 }
