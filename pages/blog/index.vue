@@ -9,28 +9,32 @@
           </div>
           <div class="menu-bar">
             <div class="menu-item">
-              <nuxt-link to="/about">
-                主页
+              <nuxt-link class="link" to="/about">
+                · 主页
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link to="/about">
-                关于
+              <nuxt-link class="link" to="/about">
+                · 关于
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link to="/about">
-                标签
+              <nuxt-link class="link" to="/about">
+                · 标签
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link to="/about">
-                日志
+              <nuxt-link class="link" to="/about">
+                · 日志
               </nuxt-link>
             </div>
           </div>
         </div>
-        <div class="deputy-panel">
+        <div
+          ref="deputyPanel"
+          class="deputy-panel"
+          :class="{'deputy-welt': deputyIsWelt}"
+        >
           动态面板
         </div>
       </div>
@@ -43,11 +47,26 @@
 </template>
 
 <script lang="ts">
-
-export default {
-  name: 'BlogIndex'
-}
+import Vue from 'vue'
+export default Vue.extend({
+  name: 'BlogIndex',
+  data () {
+    return {
+      deputyIsWelt: false
+    }
+  },
+  mounted ():void {
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  methods: {
+    handleScroll (): void {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      this.deputyIsWelt = scrollTop > 267
+    }
+  }
+})
 </script>
+
 <style lang="less">
 .blog-index {
   background: rgb(245, 247, 249);
@@ -76,21 +95,39 @@ export default {
           line-height: 80px;
         }
         .menu-bar {
-          margin-top: 20px;
-          margin-bottom: 10px;
+          padding: 10px 0;
+          font-size: 13px;
           .menu-item {
             padding: 5px 20px;
+            .link {
+              display: block;
+              font-size: 13px;
+              color: #555;
+              line-height: 26px;
+              border-bottom: none;
+              text-decoration: none;
+              outline: none;
+              &:hover {
+                color: #222;
+              }
+            }
           }
         }
       }
       .deputy-panel {
-        margin-top: 20px;
+        margin-top: 10px;
         background: white;
         height: 100px;
+        position: static;
+        &.deputy-welt {
+          position: fixed;
+          width: 240px;
+          top: 0;
+        }
       }
     }
     .blog-content {
-      min-height: 4000px;
+      min-height: 700px;
       width: 100%;
       background: white;
 
