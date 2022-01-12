@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'uta',
+    title: '世界終有時',
     htmlAttrs: {
       lang: 'en'
     },

@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div class="app">
+    <nuxt-child />
+  </div>
 </template>
 
 <script lang="ts">
@@ -9,3 +11,9 @@ export default Vue.extend({
   name: 'IndexPage'
 })
 </script>
+
+<style lang="less">
+.app {
+
+}
+</style>
