@@ -1,7 +1,9 @@
 <template>
   <div class="about">
-    文章详情监修中...
-    <BlogError />
+    <div v-if="!isError">
+      文章内容
+    </div>
+    <BlogError v-else />
   </div>
 </template>
 
@@ -9,13 +11,18 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IdCon',
-  transition: 'fade'
+  name: 'ArticleContent',
+  transition: 'fade',
+  asyncData () {
+    return {
+      isError: true
+    }
+  }
 })
 </script>
 
 <style lang="less">
 .about {
-
+  height: 100%;
 }
 </style>

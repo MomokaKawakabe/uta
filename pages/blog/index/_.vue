@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    找不到该页面
+  <div class="page-error">
+    <BlogError />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
-.about {
-
+.page-error {
+  height: 100%;
 }
 </style>
