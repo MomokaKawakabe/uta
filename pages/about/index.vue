@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nuxt-child />
+  <div class="about">
+    关于我监修中...
   </div>
 </template>
 
@@ -11,3 +11,9 @@ export default Vue.extend({
   name: 'IndexPage'
 })
 </script>
+
+<style lang="less">
+.about {
+
+}
+</style>

@@ -9,22 +9,22 @@
           </div>
           <div class="menu-bar">
             <div class="menu-item">
-              <nuxt-link class="link" to="/about">
+              <nuxt-link class="link" to="/blog">
                 · 主页
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link class="link" to="/about">
+              <nuxt-link class="link" to="/blog/about">
                 · 关于
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link class="link" to="/about">
+              <nuxt-link class="link" to="/blog/tags">
                 · 标签
               </nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link class="link" to="/about">
+              <nuxt-link class="link" to="/blog/archives">
                 · 日志
               </nuxt-link>
             </div>
@@ -50,6 +50,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'BlogIndex',
+  transition: 'fade',
   data () {
     return {
       deputyIsWelt: false
@@ -68,9 +69,9 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
+@import "./assets/css/color";
 .blog-index {
-  background: rgb(245, 247, 249);
-  color: rgb(85, 85, 85);
+  background: @b_backplane;
   position: relative;
   .index-content {
     @media (min-width: 991px) {
@@ -86,12 +87,12 @@ export default Vue.extend({
       margin-right: 20px;
       flex-shrink: 0;
       .deputy-title {
-        background: white;
+        background: @b_panel;
         .title-bar {
-          background: #222;
+          background: @b_theme;
           text-align: center;
           font-size: 20px;
-          color: #fff;
+          color: @f_contrast;
           line-height: 80px;
         }
         .menu-bar {
@@ -102,13 +103,13 @@ export default Vue.extend({
             .link {
               display: block;
               font-size: 13px;
-              color: #555;
+              color: @f_main;
               line-height: 26px;
               border-bottom: none;
               text-decoration: none;
               outline: none;
               &:hover {
-                color: #222;
+                color: @b_theme;
               }
             }
           }
@@ -116,7 +117,7 @@ export default Vue.extend({
       }
       .deputy-panel {
         margin-top: 10px;
-        background: white;
+        background: @b_panel;
         height: 100px;
         position: static;
         &.deputy-welt {
@@ -128,8 +129,9 @@ export default Vue.extend({
     }
     .blog-content {
       min-height: 700px;
+      padding: 20px;
       width: 100%;
-      background: white;
+      background: @b_panel;
 
     }
   }

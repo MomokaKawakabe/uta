@@ -2,17 +2,10 @@
   <div class="component-blog-header" />
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  name: 'BlogIndex'
-})
-
-</script>
-
 <style lang="less">
-  .component-blog-header {
-    height: 3px;
-    background: #222;
-  }
+@import "./assets/css/color";
+.component-blog-header {
+  height: 3px;
+  background: @b_theme;
+}
 </style>

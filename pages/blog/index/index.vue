@@ -36,6 +36,7 @@
 
 export default {
   name: 'BlogList',
+  transition: 'fade',
   data () {
     return {
       articleNumber: 10
@@ -46,8 +47,8 @@ export default {
 </script>
 
 <style lang="less">
+@import "./assets/css/color";
 .blog-list {
-  padding: 20px;
   .index-banner {
     width: 100%;
     height: 260px;
@@ -68,7 +69,7 @@ export default {
         font-weight: 400;
         text-align: center;
         .article-link {
-          color: #555;
+          color: @f_main;
           border-bottom: none;
           line-height: 1.2;
           vertical-align: top;
@@ -83,7 +84,7 @@ export default {
             left: 0;
             width: 100%;
             height: 1px;
-            background-color: #555;
+            background-color: @f_main;
             visibility: hidden;
             transform: scaleX(0);
             transition-duration: 0.2s;
@@ -98,7 +99,7 @@ export default {
       }
       .article-tag {
         font-size: 12px;
-        color: #999;
+        color: @f_secondary;
         text-align: center;
         line-height: 2;
         margin: 10px auto 30px;
@@ -110,7 +111,7 @@ export default {
         @media (max-width: 1600px) {
           font-size: 14px;
         }
-        color: #555;
+        color: @f_main;
         line-height: 2;
       }
       .article-demarcation {

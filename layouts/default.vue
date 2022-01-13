@@ -1,5 +1,5 @@
 <template>
-  <nuxt />
+  <nuxt class="app" />
 </template>
 
 <script>
@@ -8,7 +8,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+@import "assets/css/color.less";
+.app {
+  min-height: 100vh;
+}
 html {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif,
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -19,6 +23,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: @f_main;
+}
+
+body {
+  width: 100vw;
 }
 
 *,
@@ -26,5 +37,8 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  height: 100vh;
 }
 </style>
