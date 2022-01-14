@@ -12,22 +12,22 @@
           <div class="menu-bar">
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/about">
-                · 关于
+                · 关于 ·
               </nuxt-link>
             </div>
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/tags">
-                · 标签
+                · 标签 ·
               </nuxt-link>
             </div>
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/archives">
-                · 日志
+                · 日志 ·
               </nuxt-link>
             </div>
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/search">
-                · 搜索
+                · 搜索 ·
               </nuxt-link>
             </div>
           </div>
