@@ -5,14 +5,11 @@
       <div class="blog-deputy">
         <div class="deputy-title">
           <div class="title-bar">
-            世界终有时
+            <nuxt-link class="link" to="/blog">
+              世界终有时
+            </nuxt-link>
           </div>
           <div class="menu-bar">
-            <div class="menu-item">
-              <nuxt-link class="link" to="/blog">
-                · 主页
-              </nuxt-link>
-            </div>
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/about">
                 · 关于
@@ -26,6 +23,11 @@
             <div class="menu-item">
               <nuxt-link class="link" to="/blog/archives">
                 · 日志
+              </nuxt-link>
+            </div>
+            <div class="menu-item">
+              <nuxt-link class="link" to="/blog/search">
+                · 搜索
               </nuxt-link>
             </div>
           </div>
@@ -69,6 +71,7 @@ export default Vue.extend({
 
 <style lang="less">
 @import "./assets/css/color";
+@deputy_width:220px;
 .blog-index {
   background: @b_backplane;
   position: relative;
@@ -82,7 +85,7 @@ export default Vue.extend({
     }
     margin: 0 auto;
     .blog-deputy {
-      width: 240px;
+      width: @deputy_width;
       margin-right: 20px;
       flex-shrink: 0;
       .deputy-title {
@@ -121,7 +124,7 @@ export default Vue.extend({
         position: static;
         &.deputy-welt {
           position: fixed;
-          width: 240px;
+          width: @deputy_width;
           top: 0;
         }
       }

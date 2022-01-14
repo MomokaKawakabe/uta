@@ -3,7 +3,7 @@
     <div v-if="!isError">
       文章内容
     </div>
-    <BlogError v-else />
+    <BlogError v-else type="NOT_FOUND_ARTICLE" />
   </div>
 </template>
 

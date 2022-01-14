@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    关于我监修中...
+  <div class="page-about">
+    <BlogError type="DIRECT_COMPILATION" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
-.about {
-
+.page-about {
+  height: 100%;
 }
 </style>

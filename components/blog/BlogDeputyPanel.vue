@@ -45,7 +45,7 @@
             target="view_window"
             href="https://tieba.baidu.com/home/main?id=tb.1.828222e5.2W08H_FcPtfBZEvLUl0cDw&fr=index"
           >
-            贴吧
+            百度贴吧
           </a>
         </div>
         <div class="contact-item">
@@ -100,8 +100,9 @@
       border-top: 1px @b_theme_line dotted;
       margin-top: 15px;
       padding: 4px 0;
-      a {
-        color: #fc6423;
+      color: #fc6423;
+      &:hover {
+        color: #e34603;
       }
     }
     .avatar-contact {

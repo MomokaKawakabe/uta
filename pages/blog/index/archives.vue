@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    日志页监修中...
+  <div class="page-archives">
+    <BlogError type="DIRECT_COMPILATION" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
-.about {
-
+.page-archives {
+  height: 100%;
 }
 </style>

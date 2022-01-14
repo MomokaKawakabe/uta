@@ -1,5 +1,5 @@
 <template>
-  <div class="page-tags">
+  <div class="page-search">
     <BlogError type="DIRECT_COMPILATION" />
   </div>
 </template>
@@ -14,7 +14,7 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
-.page-tags {
+.page-search {
   height: 100%;
 }
 </style>

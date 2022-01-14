@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="blog-pager">
-      分页器
+      分页器（×）
     </div>
   </div>
 </template>
