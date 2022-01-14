@@ -117,7 +117,7 @@ export default {
       .article-demarcation {
         height: 1px;
         width: 50px;
-        background-color: #ccc;
+        background-color: @b_theme_line;
         margin: 35px auto 60px;
       }
     }

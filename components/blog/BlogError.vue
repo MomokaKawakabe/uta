@@ -1,7 +1,7 @@
 <template>
   <div class="blog-error">
     <div class="error-img">
-      <img width="160px" height="160px" src="/img/blog/error.png" alt="错误">
+      <img width="160" height="162" src="/img/blog/error.png" alt="错误">
     </div>
     <div class="error-msg">
       文章不存在或已删除

@@ -30,13 +30,11 @@
             </div>
           </div>
         </div>
-        <div
+        <BlogDeputyPanel
           ref="deputyPanel"
           class="deputy-panel"
           :class="{'deputy-welt': deputyIsWelt}"
-        >
-          动态面板
-        </div>
+        />
       </div>
       <div class="blog-content">
         <nuxt-child />
@@ -58,6 +56,7 @@ export default Vue.extend({
   },
   mounted ():void {
     window.addEventListener('scroll', this.handleScroll, true)
+    this.handleScroll()
   },
   methods: {
     handleScroll (): void {
