@@ -145,7 +145,7 @@ export default Vue.extend({
       font-size: 14px;
       text-align: justify;
       @media (min-width: 1600px) {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
     .article-abstract {

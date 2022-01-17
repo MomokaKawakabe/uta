@@ -58,7 +58,7 @@ export default Vue.extend({
   align-items: center;
   font-size: 14px;
   @media (min-width: 1600px) {
-    font-size: 16px;
+    font-size: 15px;
   }
   .error-msg {
     margin-top: 10px;

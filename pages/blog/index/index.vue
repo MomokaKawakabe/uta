@@ -105,11 +105,9 @@ export default {
         margin: 10px auto 30px;
       }
       .article-abstract {
+        font-size: 14px;
         @media (min-width: 1600px) {
-          font-size: 16px;
-        }
-        @media (max-width: 1600px) {
-          font-size: 14px;
+          font-size: 15px;
         }
         color: @f_main;
         line-height: 2;
